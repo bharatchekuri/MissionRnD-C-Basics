@@ -11,7 +11,9 @@ ERROR CASES:
 NOTES:
 */
 
-int sum(int a, int b)
+int sum(int a,int b)
 {
-	return 0;
+	
+	return a + b;
+	
 }

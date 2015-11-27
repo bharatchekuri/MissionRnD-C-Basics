@@ -14,8 +14,22 @@ ERROR CASES:
 
 NOTES: 		use stdarg.h header.
 */
-
+#include<stdarg.h>
 int variableArguments(int arg_count, ...)
 {
-	return 0;
+	va_list valist;
+	int i,sum=0;
+
+	/* initialize valist for num number of arguments */
+	va_start(valist, arg_count);
+	
+	for (i = 0; i < arg_count; i++)
+	{
+		if (va_arg(valist, int)>90)
+		{
+			sum = sum + 1;
+		}
+	}
+
+	return sum;
 }
